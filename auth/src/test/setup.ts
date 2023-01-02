@@ -10,7 +10,7 @@ declare global {
 let mongo: any
 beforeAll(async () => {
   process.env.JWT_KEY = "asdf"
-  const mongo = await MongoMemoryServer.create()
+  mongo = await MongoMemoryServer.create()
   const mongoUri = mongo.getUri()
 
   await mongoose.connect(mongoUri, {})
@@ -24,13 +24,12 @@ beforeEach(async () => {
   }
 })
 
-// @ts-ignore
-afterAll(done => {
+afterAll(async () => {
   if (mongo) {
-    mongo.stop()
+    await mongo.stop()
   }
-  mongoose.connection.close()
-  done()
+
+  await mongoose.connection.close()
 })
 
 global.signin = async () => {
