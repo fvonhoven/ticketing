@@ -25,12 +25,12 @@ beforeEach(async () => {
 })
 
 // @ts-ignore
-afterAll(async done => {
+afterAll(done => {
   if (mongo) {
-    await mongo.stop()
+    mongo.stop()
   }
-  await mongoose.connection.close()
-  await done()
+  mongoose.connection.close()
+  done()
 })
 
 global.signin = async () => {
