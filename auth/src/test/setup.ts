@@ -10,7 +10,7 @@ declare global {
 let mongo: any
 beforeAll(async () => {
   process.env.JWT_KEY = "asdf"
-  const mongo = await MongoMemoryServer.create()
+  mongo = await MongoMemoryServer.create()
   const mongoUri = mongo.getUri()
 
   await mongoose.connect(mongoUri, {})
@@ -28,6 +28,7 @@ afterAll(async () => {
   if (mongo) {
     await mongo.stop()
   }
+
   await mongoose.connection.close()
 })
 
