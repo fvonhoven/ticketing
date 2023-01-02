@@ -30,7 +30,7 @@ afterAll(async done => {
     await mongo.stop()
   }
   await mongoose.connection.close()
-  done()
+  await done()
 })
 
 global.signin = async () => {
