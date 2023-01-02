@@ -2,6 +2,7 @@ import request from "supertest"
 import { MongoMemoryServer } from "mongodb-memory-server"
 import mongoose from "mongoose"
 import { app } from "../app"
+import { DoneCallback } from "jest"
 
 declare global {
   var signin: () => Promise<string[]>
@@ -24,11 +25,13 @@ beforeEach(async () => {
   }
 })
 
-afterAll(async () => {
+// @ts-ignore
+afterAll(async done => {
   if (mongo) {
     await mongo.stop()
   }
   await mongoose.connection.close()
+  done()
 })
 
 global.signin = async () => {
