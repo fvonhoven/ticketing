@@ -3,7 +3,7 @@ import axios from "axios"
 export default ({ req }) => {
   if (typeof window === "undefined") {
     return axios.create({
-      baseURL: "http://ticketzone.online",
+      baseURL: "http://www.ticketzone.online",
       headers: req.headers,
     })
   } else {
