@@ -14,7 +14,7 @@ app.use(json())
 app.use(
   cookieSession({
     signed: false,
-    secure: process.env.NODE_ENV !== "test",
+    secure: false // process.env.NODE_ENV !== "test",
   }),
 )
 app.use(currentUser)
@@ -31,3 +31,4 @@ app.all("*", () => {
 app.use(errorHandler)
 
 export { app }
+2314E1980748B5CDE73E939A713C6AB0.F4FA39DFCCC9667DBFD3BE8DE48E7490.63b4628fb72d5.comodoca.com
