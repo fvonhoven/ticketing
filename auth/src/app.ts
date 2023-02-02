@@ -9,7 +9,7 @@ import { signoutRouter } from "./routes/signout"
 import { signupRouter } from "./routes/signup"
 import { errorHandler, NotFoundError } from "@fvhtickets/common"
 
-console.log("Auth service starting...")
+console.log("Auth service starting...!")
 const app = express()
 app.set("trust proxy", true)
 app.use(json())
