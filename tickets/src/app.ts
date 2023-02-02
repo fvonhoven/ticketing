@@ -8,6 +8,8 @@ import { showTicketRouter } from "./routes/show"
 import { indexTicketRouter } from "./routes"
 import { updateTicketRouter } from "./routes/update"
 
+console.log("Tickets service starting...")
+
 const app = express()
 app.set("trust proxy", true)
 app.use(json())

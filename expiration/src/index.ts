@@ -1,5 +1,6 @@
 import { natsWrapper } from "./nats-wrapper"
 import { OrderCreatedListener } from "./events/listeners/order-created-listener"
+console.log("Expiration service starting...")
 
 const start = async () => {
   console.log("Starting expiration service...")
