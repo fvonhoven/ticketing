@@ -23,7 +23,7 @@ app.use(deleteOrderRouter)
 app.use(indexOrderRouter)
 app.use(newOrderRouter)
 app.use(showOrderRouter)
-console.log("Orders service starting...")
+console.log("Orders service starting...!")
 
 app.all("*", () => {
   throw new NotFoundError()

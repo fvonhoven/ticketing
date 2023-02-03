@@ -5,7 +5,7 @@ import cookieSession from "cookie-session"
 import { errorHandler, NotFoundError, currentUser } from "@fvhtickets/common"
 import { createChargeRouter } from "./routes/new"
 
-console.log("Payments service starting...")
+console.log("Payments service starting...!")
 const app = express()
 app.set("trust proxy", true)
 app.use(json())

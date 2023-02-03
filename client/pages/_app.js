@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import buildClient from "../api/build-client"
 import Header from "../components/header"
 
-console.log("Client service starting...")
+console.log("Client service starting...!")
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
