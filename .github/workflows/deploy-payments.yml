@@ -1,6 +1,11 @@
 name: deploy-payments
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - "payments/**"
   push:
     branches:
       - main

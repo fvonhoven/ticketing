@@ -1,6 +1,11 @@
 name: deploy-client
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - "client/**"
   push:
     branches:
       - main

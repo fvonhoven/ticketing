@@ -1,6 +1,11 @@
 name: deploy-orders
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - "orders/**"
   push:
     branches:
       - main

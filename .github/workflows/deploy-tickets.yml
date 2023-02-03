@@ -1,6 +1,11 @@
 name: deploy-tickets
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - "tickets/**"
   push:
     branches:
       - main
