@@ -11,7 +11,7 @@ spec:
     - hosts:
         - ticketzone.online
         - www.ticketzone.online
-      secretName: letsencrypt-prod
+      secretName: ticketzone-tls
   rules:
     - host: ticketzone.online
       http:
